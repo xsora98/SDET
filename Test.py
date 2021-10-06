@@ -19,7 +19,7 @@ time.sleep(2)
 main=driver.find_element_by_class_name("bbfbe3d2")
 time.sleep(1)
 elements=main.find_elements_by_tag_name("article")
-
+time.sleep(1)
 nr=0
 for x in elements:
     if "Dubai Marina" in x.find_element_by_class_name("d6e81fd0").text:
@@ -28,3 +28,5 @@ if(nr==len(elements)):
     print("Test 1 passed")
 else:
     print("Test 1 failed")
+
+driver.quit()
