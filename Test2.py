@@ -40,17 +40,6 @@ except NoSuchElementException:
     driver.quit()
     sys.exit(1)
 
-print("Creating the Dubai Apartments list from Popular Searches...")
-try:
-    list=main.find_elements_by_class_name("_5a12e6f6")
-    for x in list:
-        if x.find_element_by_class_name("_78d325fa ").text=="Dubai Apartments":
-            list_apartments=x.find_elements_by_class_name("_76ddbf32")
-except NoSuchElementException:
-    print("The Dubai Apartments field could not be found")
-    driver.quit()
-    sys.exit(1)
-
 print("Preparing verify and link lists...")
 try:
     list_verify=[]
